@@ -7,7 +7,7 @@ const Note=require('./models/note');
 const bodyParser=require('body-parser');
 app.use(bodyParser.urlencoded({ extended:false}));
 app.use(bodyParser.json());
-const mongoDBPath="mongodb+srv://godsmith:godsmith@cluster0.dbnfeb3.mongodb.net/notesdb";
+const mongoDBPath="mongodb+srv://godsmith:godsmith@cluster0.dbnfeb3.mongodb.net/?retryWrites=true&w=majority";
 mongoose.connect(mongoDBPath).then(function(){
 //home route
 app.get("/", function(req, res){
