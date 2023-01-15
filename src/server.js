@@ -11,7 +11,7 @@ const mongoDBPath="mongodb+srv://godsmith:godsmith@cluster0.dbnfeb3.mongodb.net/
 mongoose.connect(mongoDBPath).then(function(){
 //home route
 app.get("/", function(req, res){
-  const response={message:"API Works"};
+  const response={statusCode:res.statusCode, message:"API Works"};
   res.json(response);
 });
 //notes route
